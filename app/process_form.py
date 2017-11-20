@@ -27,17 +27,18 @@ def docx_replace_regex(doc_obj, regex , replace):
             for cell in row.cells:
                 docx_replace_regex(cell, regex , replace)
 
-def email(filename):
+def send_email(filename,email,subject,text,html):
 
-	print requests.post("https://api.mailgun.net/v3/sandbox6e7ba6f1a09e44c09e8db03258ead03c.mailgun.org",  
-                    auth=("api", "key-d793da1727b1604ab6fa7ae8272d8360"),
+	print filename,email  
+	print requests.post("https://api.mailgun.net/v3/jaskapital.com/messages",  
+                    auth=("api", "key-7028ed900aeadbbe928022178c1eb33d"),
                     files=[("attachment", open(filename))],
-                    data={"from": "do-not-reply <postmaster@sandbox6e7ba6f1a09e44c09e8db03258ead03c.mailgun.org>",
-                          "to": "kresna.jenie@gmail.com",
-                          "cc": "",
-                          "subject": "Hello",
-                          "text": "Testing some Mailgun awesomness with attachment!",
-                          "html": "<html>HTML version of the body</html>"})
+                    data={"from": "<izak@jaskapital.com>",
+                          "to": email,
+#                          "cc": "kresna.jenie@gmail.com",
+                          "subject": subject,
+                          "text": text,
+                          "html": html})
 
 def process_data(request):
 
@@ -56,10 +57,19 @@ def process_data(request):
 		print v, request.form[v]
 		docx_replace_regex(doc, regex1 , replace1)
 
-	filename = "result1.docx"
+
+
+	nama_depan = request.form['nama_depan_saya']
+	nama_belakang = request.form['nama_belakang_saya']
+	filename = "pendaftaran-"+nama_depan+"-"+nama_belakang+".docx"
 	fileoutput = os.path.join(APP_STATIC, filename)
+	email = request.form['email']
 	doc.save(fileoutput)
-	#email(filename)
+	subject='Pendaftaran Kaderisasi & Internalisasi OSIS 2018/2019'
+	text ='Terima kasih ya udah daftar!'
+	html='<html>Terima kasih udah <b>daftar</b> yaaaaa</html>'
+	send_email(fileoutput,email,subject,text,html)
+    
 
 
 

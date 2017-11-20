@@ -21,12 +21,11 @@ def form():
 def handle_data():
 
 	pf.process_data(request)
+	nama = request.form['nama_depan_saya'] + " " + request.form['nama_belakang_saya']
+	email = request.form['email']
 
-    #nama_depan = 'izak'
-    #projectpath = request.form['projectFilepath']
-    # your code
-    # return a response
-	user = {'nickname': 'Miguel'}  # fake user
-	return render_template('index.html',
-                           title='Hasil',
+	user = {'nickname': nama,
+          'email': email}  # fake user
+	return render_template('setelah_pendaftaran.html',
+                           title='Terima kasih!',
                            user=user)
