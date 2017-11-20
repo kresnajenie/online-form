@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>FORMULIR PENDAFTARAN  KADERISASI &amp; INTERNALISASI</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='view.css')}}" media="all">
+<script type="text/javascript" src="{{ url_for('static', filename='view.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='calendar.js')}}"></script>
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>FORMULIR PENDAFTARAN  KADERISASI &amp; INTERNALISASI</a></h1>
+		<form id="form_58394" class="appnitro"  method="post" action="{{ url_for('handle_data') }}">
+					<div class="form_description">
+			<h2>FORMULIR PENDAFTARAN  KADERISASI &amp; INTERNALISASI</h2>
+			<p>Formulir Pendaftaran Kaderisasi &amp; Internalisasi OSIS 2018 - 2019</p>
+		</div>						
+			<ul >
+			
+					<li class="section_break">
+			<h3>1. Data Pribadi</h3>
+			<p></p>
+		</li>		<li id="li_2" >
+		<label class="description" for="nama_depan_saya">Nama Lengkap </label>
+		<span>
+			<input id="nama_depan_saya" name= "nama_depan_saya" class="element text" maxlength="255" size="8" value=""/>
+			<label>First</label>
+		</span>
+		<span>
+			<input id="nama_belakang_saya" name= "nama_belakang_saya" class="element text" maxlength="255" size="14" value=""/>
+			<label>Last</label>
+		</span> 
+		</li>		<li id="li_3" >
+		<label class="description" for="nama_panggilan">Nama Panggilan </label>
+		<div>
+			<input id="nama_panggilan" name="nama_panggilan" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_4" >
+		<label class="description" for="email">Email </label>
+		<div>
+			<input id="email" name="email" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_7" >
+		<label class="description" for="tempat_lahir">Tempat Lahir </label>
+		<div>
+			<input id="tempat_lahir" name="tempat_lahir" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_8" >
+		<label class="description" for="element_8">Tanggal Lahir </label>
+		<span>
+			<input id="tanggal_lahir" name="tanggal_lahir" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="tanggal_lahir">DD</label>
+		</span>
+		<span>
+			<input id="bulan_lahir" name="bulan_lahir" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="bulan_lahir">MM</label>
+		</span>
+		<span>
+	 		<input id="tahun_lahir" name="tahun_lahir" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="tahun_lahir">YYYY</label>
+		</span>
+	
+		<span id="calendar_8">
+			<img id="cal_img_8" class="datepicker" src="images/calendar.gif" alt="Pick a date.">	
+		</span>
+		<script type="text/javascript">
+			Calendar.setup({
+			inputField	 : "element_8_3",
+			baseField    : "element_8",
+			displayArea  : "calendar_8",
+			button		 : "cal_img_8",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectEuropeDate
+			});
+		</script>
+		 
+		</li>		<li id="li_5" >
+		<label class="description" for="nomor_hape">Nomor Handphone </label>
+		<div>
+			<input id="nomor_hape" name="nomor_hape" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_6" >
+		<label class="description" for="nomor_telepon_saya">Nomor Telepon </label>
+		<div>
+			<input id="nomor_telepon_saya" name="nomor_telepon_saya" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li class="section_break">
+			<h3>2. Data Orang Tua / Wali Murid</h3>
+			<p></p>
+		</li>		<li class="section_break">
+			<h3>A. Ayah</h3>
+			<p></p>
+		</li>		<li id="li_11" >
+		<label class="description" for="element_11">Nama Lengkap </label>
+		<span>
+			<input id="nama_depan_ayah" name= "nama_depan_ayah" class="element text" maxlength="255" size="8" value=""/>
+			<label>First</label>
+		</span>
+		<span>
+			<input id="nama_belakang_ayah" name= "nama_belakang_ayah" class="element text" maxlength="255" size="14" value=""/>
+			<label>Last</label>
+		</span> 
+		</li>		<li id="li_15" >
+		<label class="description" for="nomor_telepon_ayah">Nomor Telepon </label>
+		<div>
+			<input id="nomor_telepon_ayah" name="nomor_telepon_ayah" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li class="section_break">
+			<h3>B. Ibu</h3>
+			<p></p>
+		</li>		<li id="li_14" >
+		<label class="description" for="element_14">Nama Lengkap </label>
+		<span>
+			<input id="nama_depan_ibu" name= "nama_depan_ibu" class="element text" maxlength="255" size="8" value=""/>
+			<label>First</label>
+		</span>
+		<span>
+			<input id="nama_belakang_ibu" name= "nama_belakang_ibu" class="element text" maxlength="255" size="14" value=""/>
+			<label>Last</label>
+		</span> 
+		</li>		<li id="li_12" >
+		<label class="description" for="nomor_telepon_ibu">Nomor Telepon </label>
+		<div>
+			<input id="nomor_telepon_ibu" name="nomor_telepon_ibu" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li class="section_break">
+			<h3>C. Wali Murid (Jika tidak diwakilkan tidak perlu diisi)</h3>
+			<p></p>
+		</li>		<li id="li_17" >
+		<label class="description" for="element_17">Nama Lengkap </label>
+		<span>
+			<input id="nama_depan_wali" name= "nama_depan_wali" class="element text" maxlength="255" size="8" value=""/>
+			<label>First</label>
+		</span>
+		<span>
+			<input id="nama_belakang_wali" name= "nama_belakang_wali" class="element text" maxlength="255" size="14" value=""/>
+			<label>Last</label>
+		</span> 
+		</li>		<li id="li_18" >
+		<label class="description" for="element_18">Nomor Telepon </label>
+		<div>
+			<input id="nomor_telepon_wali" name="nomor_telepon_wali" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li class="section_break">
+			<h3>3. Data Sebagai Kanisian</h3>
+			<p></p>
+		</li>		<li id="li_23" >
+		<label class="description" for="diterima_kelas">Diterima di Kelas </label>
+		<div>
+		<select class="element select medium" id="diterima_kelas" name="diterima_kelas"> 
+			<option value="" selected="selected"></option>
+<option value="7" >7</option>
+<option value="8" >8</option>
+<option value="9" >9</option>
+
+		</select>
+		</div> 
+		</li>		<li id="li_22" >
+		<label class="description" for="tahun_diterima">Tahun </label>
+		<div>
+		<select class="element select medium" id="tahun_diterima" name="tahun_diterima"> 
+			<option value="1" >2014</option>
+<option value="2015" >2015</option>
+<option value="2016" >2016</option>
+<option value="2017" selected="selected">2017</option>
+
+		</select>
+		</div> 
+		</li>		<li class="section_break">
+			<h3>Riwayat Pelanggaran :</h3>
+			<p></p>
+		</li>		<li id="li_24" >
+		<label class="description" for="pelanggaran_sem1">Jumlah Pelanggaran Semester 1 </label>
+		<div>
+		<select class="element select medium" id="pelanggaran_sem1" name="pelanggaran_sem1"> 
+			<option value="" selected="selected"></option>
+<option value="Tidak Ada" >Tidak Ada</option>
+<option value="1" >1</option>
+<option value="2" >2</option>
+<option value="3" >3</option>
+<option value="4" >4</option>
+<option value="5" >5</option>
+<option value="6" >6</option>
+<option value="7" >7</option>
+<option value="8" >8</option>
+<option value="9" >9</option>
+<option value="10" >10</option>
+<option value="11" >11</option>
+<option value="12" >12</option>
+<option value="13" >13</option>
+<option value="14" >14</option>
+<option value="15" >15</option>
+
+		</select>
+		</div> 
+		</li>		<li id="li_28" >
+		<label class="description" for="pelanggaran_sem2">Jumlah Pelanggaran Semester 2 </label>
+		<div>
+		<select class="element select medium" id="pelanggaran_sem2" name="pelanggaran_sem2"> 
+<option value="Belum Ikut" selected="selected">Belum Ikut</option>
+<option value="Tidak Ada" >Tidak Ada</option>
+<option value="1" >1</option>
+<option value="2" >2</option>
+<option value="3" >3</option>
+<option value="4" >4</option>
+<option value="5" >5</option>
+<option value="6" >6</option>
+<option value="7" >7</option>
+<option value="8" >8</option>
+<option value="9" >9</option>
+<option value="10" >10</option>
+<option value="11" >11</option>
+<option value="12" >12</option>
+<option value="13" >13</option>
+<option value="14" >14</option>
+<option value="15" >15</option>
+
+		</select>
+		</div> 
+		</li>		<li id="li_27" >
+		<label class="description" for="pelanggaran_sem3">Jumlah Pelanggaran Semester 3 </label>
+		<div>
+		<select class="element select medium" id="pelanggaran_sem3" name="pelanggaran_sem3"> 
+			<option value="" selected="selected"></option>
+<option value="Belum Ikut" selected="selected">Belum Ikut</option>
+<option value="Tidak Ada" >Tidak Ada</option>
+<option value="1" >1</option>
+<option value="2" >2</option>
+<option value="3" >3</option>
+<option value="4" >4</option>
+<option value="5" >5</option>
+<option value="6" >6</option>
+<option value="7" >7</option>
+<option value="8" >8</option>
+<option value="9" >9</option>
+<option value="10" >10</option>
+<option value="11" >11</option>
+<option value="12" >12</option>
+<option value="13" >13</option>
+<option value="14" >14</option>
+<option value="15" >15</option>
+
+		</select>
+		</div> 
+		</li>		<li id="li_26" >
+		<label class="description" for="pelanggaran_sem4">Jumlah Pelanggaran Semester 4 </label>
+		<div>
+		<select class="element select medium" id="pelanggaran_sem4" name="pelanggaran_sem4"> 
+<option value="Belum Ikut" selected="selected">Belum Ikut</option>
+<option value="Tidak Ada" >Tidak Ada</option>
+<option value="1" >1</option>
+<option value="2" >2</option>
+<option value="3" >3</option>
+<option value="4" >4</option>
+<option value="5" >5</option>
+<option value="6" >6</option>
+<option value="7" >7</option>
+<option value="8" >8</option>
+<option value="9" >9</option>
+<option value="10" >10</option>
+<option value="11" >11</option>
+<option value="12" >12</option>
+<option value="13" >13</option>
+<option value="14" >14</option>
+<option value="15" >15</option>
+
+		</select>
+		</div> 
+		</li>		<li id="li_25" >
+		<label class="description" for="jumlah_sp">Pernah Mendapat Surat Peringatan </label>
+		<div>
+		<select class="element select medium" id="jumlah_sp" name="jumlah_sp"> 
+			<option value="" selected="selected"></option>
+<option value="Tidak Pernah" >Tidak Pernah</option>
+<option value="1 kali" >1 kali</option>
+<option value="2 kali" >2 kali</option>
+
+		</select>
+		</div> 
+		</li>		<li class="section_break">
+			<h3>4. Riwayat Kesehatan:</h3>
+			<p></p>
+		</li>		<li class="section_break">
+			<h3>A. Sakit Berat</h3>
+			<p></p>
+		</li>		<li id="li_45" >
+		<label class="description" for="tulang">Pernah mengalami patah/retak tulang (fisura/fraktura) </label>
+		<span>
+			<input id="bone_1" name="bone" class="element radio" type="radio" value="Ya" />
+<label class="choice" for="bone_1">Ya</label>
+<input id="bone_2" name="bone" class="element radio" type="radio" value="Tidak" checked="checked"/>
+<label class="choice" for="bone_2">Tidak</label>
+
+		</span> 
+		</li>		<li id="li_32" >
+		<label class="description" for="tahun_tulang">Jika "Ya", tahun: </label>
+		<div>
+			<input id="tahun_tulang" name="tahun_tulang" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_34" >
+		<label class="description" for="umur_tulang">Jika "Ya", umur: </label>
+		<div>
+			<input id="umur_tulang" name="umur_tulang" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_46" >
+		<label class="description" for="disease">Mengalami penyakit yang berbahaya untuk aktivitas yang banyak </label>
+		<span>
+			<input id="disease_1" name="disease" class="element radio" type="radio" value="Ya" />
+<label class="choice" for="disease_1">Ya</label>
+<input id="disease_2" name="disease" class="element radio" type="radio" value="Tidak" checked="checked"/>
+<label class="choice" for="disease_2">Tidak</label>
+
+		</span> 
+		</li>		<li id="li_30" >
+		<label class="description" for="penyakit_apa">Jika "Ya", penyakit: </label>
+		<div>
+			<input id="penyakit_apa" name="penyakit_apa" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_47" >
+		<label class="description" for="kaukus">Ada kekurangan/kelemahan pada organ tubuh </label>
+		<span>
+			<input id="kaukus_1" name="kaukus" class="element radio" type="radio" value="Ya" />
+<label class="choice" for="kaukus_1">Ya</label>
+<input id="kaukus_2" name="kaukus" class="element radio" type="radio" value="Tidak" checked="checked"/>
+<label class="choice" for="kaukus_2">Tidak</label>
+
+		</span> 
+		</li>		<li id="li_31" >
+		<label class="description" for="organ_apa">Jika "Ya", organ: </label>
+		<div>
+			<input id="organ_apa" name="organ_apa" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_48" >
+		<label class="description" for="rumah_sakit">Pernah dirawat di rumah sakit / opname </label>
+		<span>
+			<input id="rumah_sakit_1" name="rumah_sakit" class="element radio" type="radio" value="Ya" />
+<label class="choice" for="rumah_sakit_1">Ya</label>
+<input id="rumah_sakit_2" name="rumah_sakit" class="element radio" type="radio" value="Tidak" checked="checked"/>
+<label class="choice" for="rumah_sakit_2">Tidak</label>
+
+		</span> 
+		</li>		<li id="li_35" >
+		<label class="description" for="penyakit_rs">Jika "Ya", penyakit: </label>
+		<div>
+			<input id="penyakit_rs" name="penyakit_rs" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_33" >
+		<label class="description" for="tahun_rs">Jika "Ya", tahun: </label>
+		<div>
+			<input id="tahun_rs" name="tahun_rs" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_36" >
+		<label class="description" for="lama_rs">Jika "Ya", dirawat selama: </label>
+		<div>
+			<input id="lama_rs" name="lama_rs" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li class="section_break">
+			<h3>B. Pendukung Pribadi:</h3>
+			<p></p>
+		</li>		<li id="li_40" >
+		<label class="description" for="minat_or">Bakat / Minat (OR) </label>
+		<div>
+			<input id="minat_or" name="minat_or" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_38" >
+		<label class="description" for="minat_non_or">Bakat / Minat (Non-OR) </label>
+		<div>
+			<input id="minat_non_or" name="minat_non_or" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_39" >
+		<label class="description" for="prestasi_smp">Prestasi (SMP) </label>
+		<div>
+			<input id="prestasi_smp" name="prestasi_smp" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li class="section_break">
+			<h3>C. Kehidupan Rohani</h3>
+			<p></p>
+		</li>		<li id="li_42" >
+		<label class="description" for="rohani_luar_sekolah">Kegiatan Rohani di luar sekolah </label>
+		<div>
+			<input id="rohani_luar_sekolah" name="rohani_luar_sekolah" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_44" >
+		<label class="description" for="doa_pribadi">Doa sehari - hari pribadi: </label>
+		<div>
+			<input id="doa_pribadi" name="doa_pribadi" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_43" >
+		<label class="description" for="doa_keluarga">Doa sehari - hari bersama keluarga: </label>
+		<div>
+			<input id="doa_keluarga" name="doa_keluarga" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li class="section_break">
+			<h3>Kualitas Bukan Kuantitas!</h3>
+			<p></p>
+		</li>		<li id="li_50" >
+		<label class="description" for="nomor_1">1. Apa yang Anda ketahui mengenai “PEMIMPIN”? Dan apa yang menjadi kriteria pemimpin ideal bagi Anda? </label>
+		<div>
+			<textarea id="nomor_1" name="nomor_1" class="element textarea medium"></textarea> 
+		</div> 
+		</li>		<li id="li_52" >
+		<label class="description" for="nomor_2">2. Jelaskan yang Anda ketahui mengenai “PRESIDIUM DAN LEGIONNAIRE OSIS SMP KOLESE KANISIUS”! </label>
+		<div>
+			<textarea id="nomor_2" name="nomor_2" class="element textarea medium"></textarea> 
+		</div> 
+		</li>		<li id="li_53" >
+		<label class="description" for="nomor_3">3. Mengapa Anda berminat menjadi pengurus OSIS SMP Kolese Kanisius? Apakah yang melatar belakanginya? </label>
+		<div>
+			<textarea id="nomor_3" name="nomor_3" class="element textarea medium"></textarea> 
+		</div> 
+		</li>		<li id="li_51" >
+		<label class="description" for="visi_dalam_kelas">4. Jelaskan visi dan misi Anda untuk menjadi seorang pengurus OSIS SMP Kolese Kanisius!
+Visi &amp; Misi di luar kelas: </label>
+		<div>
+			<textarea id="visi_dalam_kelas" name="visi_dalam_kelas" class="element textarea medium"></textarea> 
+		</div> 
+		</li>		<li id="li_54" >
+		<label class="description" for="visi_luar_kelas">Visi &amp; Misi di dalam kelas: </label>
+		<div>
+			<textarea id="visi_luar_kelas" name="visi_luar_kelas" class="element textarea medium"></textarea> 
+		</div> 
+		</li>		<li id="li_55" >
+		<label class="description" for="nomor_5">5. Apakah kalian tergabung atau pernah tergabung dalam suatu organisasi sebelumnya? Jelaskan pengalaman kalian! </label>
+		<div>
+			<textarea id="nomor_5" name="nomor_5" class="element textarea medium"></textarea> 
+		</div> 
+		</li>		<li id="li_56" >
+		<label class="description" for="nomor_6">6. Jikalau Anda menjadi pengurus OSIS SMP Kolese Kanisius, divisi atau bidang kerja apa yang akan anda pilih? Apa alasannya? </label>
+		<div>
+			<textarea id="nomor_6" name="nomor_6" class="element textarea medium"></textarea> 
+		</div> 
+		</li>		<li id="li_57" >
+		<label class="description" for="nomor_7">7. Menurut Anda mana yang lebih penting, mengejar nilai atau melaksanakan tanggung jawab anda sebagai OSIS SMP Kolese Kanisius jika terpilih?
+Contohnya : Anda memiliki agenda untuk melakukan rapat POR CC, tetapi ternyata pada keesokan harinya ada 2 ulangan dan ulangan tersebut sangat sulit. Apa yang akan kalian lakukan, memilih untuk ikut rapat atau ijin karena ingin belajar? Mengapa? </label>
+		<div>
+			<textarea id="nomor_7" name="nomor_7" class="element textarea medium"></textarea> 
+		</div> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="58394" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+		<div id="footer">
+			Generated by <a href="http://www.phpform.org">pForm</a>
+		</div>
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+	</body>
+</html>
