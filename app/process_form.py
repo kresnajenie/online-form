@@ -35,7 +35,7 @@ def send_email(filename,email,subject,text,html):
                     files=[("attachment", open(filename))],
                     data={"from": "Panitia Kaderisasi <kresna.jenie@gmail.com>",
                           "to": email,
-#                          "cc": "kresna.jenie@gmail.com",
+                          "cc": "kresna.jenie@gmail.com",
                           "subject": subject,
                           "text": text,
                           "html": html})
@@ -66,8 +66,8 @@ def process_data(request):
 	email = request.form['email']
 	doc.save(fileoutput)
 	subject='Pendaftaran Kaderisasi & Internalisasi OSIS 2018/2019'
-	text ='Terima kasih ya udah daftar!'
-	html='<html>Terima kasih udah <b>daftar</b> yaaaaa</html>'
+	text ='Terima kasih atas pendaftaran kamu, tetapi belum selesai. Diharapkan kepada siswa yang sudah mendaftar untuk print file yang sudah diberikan. File yang sudah diberi belum lengkap karena masih membutuhkan testimoni dan surat pernyataan orang tua serta pas foto. Data yang sudah lengkap harap diberikan ke Panitia Kaderisasi di Ruang Osis dari tanggal 21 November 2017 sampai dengan tanggal 24 November 2017 pukul 14.00 - 16.00. Selama ulangan umum pendaftaran akan ditutup dan akan dibuka kembali pada tanggal 4 November 2017 sampai dengan 7 November 2017.Jika ada gangguan harap menghubungi Kresna Jenie, Ignatius Bima, dan Aswandatu Putra secepatnya.'
+	html='<html>Terima kasih atas pendaftaran kamu, tetapi belum selesai. Diharapkan kepada siswa yang sudah mendaftar untuk print file yang sudah diberikan. File yang sudah diberi <b><u> belum lengkap </u></b> karena masih membutuhkan testimoni dan surat pernyataan orang tua serta pas foto. <br><br> Data yang sudah lengkap harap diberikan ke Panitia Kaderisasi di Ruang Osis dari tanggal 21 November 2017 sampai dengan tanggal 24 November 2017 pukul 14.00 - 16.00. Selama ulangan umum pendaftaran akan ditutup dan akan dibuka kembali pada tanggal 4 November 2017 sampai dengan 7 November 2017.<br><br> Jika ada gangguan harap menghubungi <a href="mailto:kresna.jenie@gmail.com">Kresna Jenie</a>, Ignatius Bima, dan Aswandatu Putra secepatnya. </h4></html>'
 	send_email(fileoutput,email,subject,text,html)
     
 
