@@ -33,7 +33,7 @@ def send_email(filename,email,subject,text,html):
 	print requests.post("https://api.mailgun.net/v3/jaskapital.com/messages",  
                     auth=("api", "key-7028ed900aeadbbe928022178c1eb33d"),
                     files=[("attachment", open(filename))],
-                    data={"from": "<izak@jaskapital.com>",
+                    data={"from": "Panitia Kaderisasi <kresna.jenie@gmail.com>",
                           "to": email,
 #                          "cc": "kresna.jenie@gmail.com",
                           "subject": subject,
