@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import render_template, request, redirect≈
 from app import app
 import process_form as pf
 
@@ -6,10 +6,12 @@ import process_form as pf
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'nickname': 'Miguel'}  # fake user
-    return render_template('index.html',
-                           title='Home',
-                           user=user)
+
+    return redirect("http://kader.jaskapital.com/form", code=302)
+#    user = {'nickname': 'Miguel'}  # fake user
+#    return render_template('index.html',
+#                           title='Home',
+#                           user=user)
 
 @app.route('/form')
 def form():
