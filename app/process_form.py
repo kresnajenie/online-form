@@ -54,7 +54,7 @@ def process_data(request):
 		v2 = v
 		regex1 = re.compile(v2)
 		replace1 = request.form[v]
-		print v, request.form[v]
+#		print v, request.form[v
 		docx_replace_regex(doc, regex1 , replace1)
 
 
